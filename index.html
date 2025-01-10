@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Cartas Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho preto sem conteúdo -->
+  <header class="w-full h-[100] bg-zinc-950">
+    <div class=" flex justify-center items-center">
+        <img src="" alt="Logo Pokemon"
+            class="w-100 h-32 rounded shadow-lg px-4 py-2">
+        <h1 class="text 4x1 mt-4 mb-2 font-bold text-white"></h1>
+    </div>
+</header>
+
+  <!-- Título abaixo do cabeçalho -->
+  <h1 class="site-title">Catálogo de Cartas Pokémon</h1>
+
+  <div class="container">
+    <!-- Restante do conteúdo do site -->
+    <button id="addCardButton">Adicionar Carta</button>
+
+    <!-- Formulário de adicionar/editar carta (oculto inicialmente) -->
+    <div id="cardFormContainer" class="form-container" style="display: none;">
+      <h2>Adicionar/Editar Carta</h2>
+      <form id="cardForm">
+        <label for="cardName">Nome da Carta:</label>
+        <input type="text" id="cardName" required>
+
+        <label for="cardDescription">Descrição:</label>
+        <textarea id="cardDescription" required></textarea>
+
+        <label for="cardImage">URL da Imagem:</label>
+        <input type="url" id="cardImage" required>
+
+        <label for="cardPrice">Preço (R$):</label>
+        <input type="number" id="cardPrice" required min="0" step="0.01">
+
+        <button type="submit" id="formSubmitButton">Adicionar Carta</button>
+        <button type="button" id="formCancelButton">Cancelar</button>
+      </form>
+    </div>
+
+    <!-- Lista de cartas -->
+    <div id="cardsList" class="cards-list">
+      <h2>Cartas Disponíveis</h2>
+      <div id="cardContainer" class="card-container">
+        <!-- Cartas serão exibidas aqui -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Carrinho de Compras -->
+  <div id="cartContainer" class="cart-container">
+    <h3>Carrinho de Compras</h3>
+    <div id="cartItems" class="cart-items">
+      <!-- Itens do carrinho serão exibidos aqui -->
+    </div>
+    <p id="totalPrice">Total: R$ 0.00</p>
+    <button id="checkoutButton">Finalizar Compra</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
