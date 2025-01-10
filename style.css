@@ -2,6 +2,14 @@
 header {
     background-color: #000; /* Cabeçalho preto */
     height: 80px; /* Altura do cabeçalho */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem */
+    align-items: center; /* Alinha verticalmente */
+  }
+  
+  header img.logo {
+    max-height: 60px; /* Ajusta a altura da logo dentro do cabeçalho */
+    height: auto; /* Mantém a proporção da imagem */
   }
   
   /* Estilo do título do site */
@@ -15,10 +23,10 @@ header {
   
   /* Estilo do corpo do site */
   body {
-    background-color: #11114E;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #11114E;
   }
   
   .container {
@@ -101,7 +109,7 @@ header {
     text-align: center;
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: #333;
     margin-bottom: 10px;
   }
   
